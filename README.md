@@ -72,5 +72,7 @@ db = client["whiteBoard_Collaborative"]
 collection = db["Connection_Info"]
 ```
 <h4>End Points :</h4>
+
 There are no http end points in the projects since the project is designed in such a way that it is mandatory to join a room.
-so the websockets endpoints are : `ws://127.0.0.1:8000/{room_id}` and various messages along with data are sent via websockets for `undo` , `redo` , `update` and `clear` to client to client via server and also to mongoDB. 
+so the websockets endpoints are : `ws://127.0.0.1:8000/ws`
+and various messages along with data are sent via websockets for `undo` , `redo` , `update` and `clear` to client to client via server and also to mongoDB. 
