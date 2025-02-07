@@ -21,6 +21,15 @@ This is a collaborative whiteboard made using React Js, Material UI, web Sockets
 </ul>
 
 Demo :
+Single User using :
+<br>
+
+![](https://github.com/srikar-5418/Collaborative-Whiteboard/blob/main/fullVideoOriginalGif.gif)
+
+Multiple User collaborating :
+<br>
+
+![](https://github.com/srikar-5418/Collaborative-Whiteboard/blob/main/demoVideo.gif)
 
 
 <br>
