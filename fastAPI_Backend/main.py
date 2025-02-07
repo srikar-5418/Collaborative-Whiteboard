@@ -2,7 +2,6 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from motor.motor_asyncio import AsyncIOMotorClient
 from typing import List
 import json
-import os
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
