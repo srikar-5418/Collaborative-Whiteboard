@@ -56,7 +56,7 @@ Open the root directory of the folder in a terminal and run the following. <br><
 ```powershell
 cd ./fastAPI_Backend
 fastapi-env\Scripts\activate #if you want to run in virtual envoriment 
-pip install fastapi uvicorn motor pydantic quote_plus python-dotenv
+pip install fastapi uvicorn motor pydantic python-dotenv websockets
 unicorn main:app -reload   #this runs the backend
 ```
 the above commands should run the backend at **https://127.0.0.1:8000** and the webSockets at `ws://127.0.0.1:8000/ws`. 
@@ -85,3 +85,5 @@ collection = db["Connection_Info"]
 There are no http end points in the projects since the project is designed in such a way that it is mandatory to join a room.
 so the websockets endpoints are : `ws://127.0.0.1:8000/ws`
 and various messages along with data are sent via websockets for `undo` , `redo` , `update` and `clear` to client to client via server and also to mongoDB. 
+
+If you like the project give it a star⭐.

@@ -2,6 +2,7 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from motor.motor_asyncio import AsyncIOMotorClient
 from typing import List
 import json
+import os
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -63,6 +64,11 @@ async def websocket_endpoint(websocket: WebSocket, room_id: str):
             room_info = await collection.find_one({"room_id": room_id})
             undoArr = room_info["undoArr"]
             redoArr = room_info["redoArr"]
+
+            #limiting maximum undo capacity to last 15 operations to improve speed of transfer of data
+            if len(undoArr)>15:
+                while len(undoArr)!=15:
+                    undoArr.pop(0)
 
             if action == "clear":
                 undoArr = []

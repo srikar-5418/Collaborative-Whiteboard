@@ -137,7 +137,7 @@ function App() {
     const img = new Image();
     img.src = imgUrl;
     img.onload = () => {
-      context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+      // context.clearRect(0, 0, context.canvas.width, context.canvas.height);
       context.drawImage(img, 0, 0);
     };
   };
